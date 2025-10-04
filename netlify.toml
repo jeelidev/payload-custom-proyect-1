@@ -3,12 +3,6 @@
   publish = ".next"
   framework = "next"
 
-
-[functions]
-  node_bundler = "esbuild"
-  external_node_modules = ["libsql","sharp"]
-  included_files = ["node_modules/sharp/**/*"]
-
 [dev]
   command = "npm run dev:preview"
   framework = "next"
@@ -18,3 +12,6 @@
   [dev.https]
     certFile = "certificates/custom-proyect-1.jeelidev.uk.pem"
     keyFile = "certificates/custom-proyect-1.jeelidev.uk-key.pem"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
