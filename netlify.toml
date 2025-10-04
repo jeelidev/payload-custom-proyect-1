@@ -1,5 +1,5 @@
 [build]
-  command = "yarn add sharp --ignore-engines && npm run build"
+  command = "yarn cache clean && yarn add --os=linux --cpu=x64 sharp@0.32 --ignore-engines && yarn build"
   publish = ".next"
   framework = "next"
 
