@@ -1,7 +1,13 @@
 [build]
-  command = "npm cache clean --force && npm install --os=linux --cpu=x64 sharp --ignore-engines && npm run build"
+  command = "npm install --include=optional sharp && npm run build"
   publish = ".next"
   framework = "next"
+
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["libsql","sharp"]
+  included_files = ["node_modules/sharp/**/*"]
 
 [dev]
   command = "npm run dev:preview"
@@ -12,6 +18,6 @@
   [dev.https]
     certFile = "certificates/custom-proyect-1.jeelidev.uk.pem"
     keyFile = "certificates/custom-proyect-1.jeelidev.uk-key.pem"
-
+    
 [[plugins]]
 package = "@netlify/plugin-nextjs"
