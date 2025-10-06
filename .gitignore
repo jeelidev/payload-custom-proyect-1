@@ -6,6 +6,7 @@ node_modules
 .next
 .vercel
 .env.runtime
+/dist-scripts
 # Payload default media upload directory
 public/media/
 

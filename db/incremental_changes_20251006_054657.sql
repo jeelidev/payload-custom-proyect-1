@@ -1,0 +1,18 @@
+INSERT INTO _posts_v_rels(id,"order",parent_id,path,posts_id,categories_id,users_id) VALUES(1,1,2,'version.authors',NULL,NULL,1);
+INSERT INTO _posts_v_rels(id,"order",parent_id,path,posts_id,categories_id,users_id) VALUES(2,1,3,'version.authors',NULL,NULL,1);
+INSERT INTO _posts_v_rels(id,"order",parent_id,path,posts_id,categories_id,users_id) VALUES(3,1,4,'version.authors',NULL,NULL,1);
+INSERT INTO _posts_v_rels(id,"order",parent_id,path,posts_id,categories_id,users_id) VALUES(4,1,5,'version.authors',NULL,NULL,1);
+INSERT INTO _posts_v_rels(id,"order",parent_id,path,posts_id,categories_id,users_id) VALUES(5,1,6,'version.authors',NULL,NULL,1);
+INSERT INTO _posts_v_rels(id,"order",parent_id,path,posts_id,categories_id,users_id) VALUES(6,1,7,'version.authors',NULL,NULL,1);
+UPDATE payload_migrations SET updated_at='2025-10-06 09:43:12' WHERE id=1;
+DELETE FROM payload_preferences WHERE id=9;
+UPDATE payload_preferences_rels SET parent_id=1 WHERE id=1;
+INSERT INTO payload_preferences_rels(id,"order",parent_id,path,users_id) VALUES(2,NULL,2,'user',1);
+INSERT INTO payload_preferences_rels(id,"order",parent_id,path,users_id) VALUES(5,NULL,3,'user',1);
+INSERT INTO payload_preferences_rels(id,"order",parent_id,path,users_id) VALUES(6,NULL,4,'user',1);
+INSERT INTO payload_preferences_rels(id,"order",parent_id,path,users_id) VALUES(7,NULL,5,'user',1);
+INSERT INTO payload_preferences_rels(id,"order",parent_id,path,users_id) VALUES(8,NULL,6,'user',1);
+INSERT INTO payload_preferences_rels(id,"order",parent_id,path,users_id) VALUES(9,NULL,7,'user',1);
+INSERT INTO payload_preferences_rels(id,"order",parent_id,path,users_id) VALUES(10,NULL,8,'user',1);
+INSERT INTO posts_rels(id,"order",parent_id,path,posts_id,categories_id,users_id) VALUES(1,1,1,'authors',NULL,NULL,1);
+UPDATE users SET name='amo y señor del universo', updated_at='2025-10-06T09:43:42.899Z' WHERE id=1;

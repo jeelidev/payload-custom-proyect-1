@@ -1,13 +1,19 @@
 [build]
-  command = "npm install --include=optional sharp && npm run build"
+  command = "pnpm add sharp && pnpm build"
   publish = ".next"
   framework = "next"
 
 
 [functions]
   node_bundler = "esbuild"
-  external_node_modules = ["libsql","sharp"]
+  external_node_modules = ["libsql" , "sharp"]
   included_files = ["node_modules/sharp/**/*"]
+
+  [functions."*"]
+    external_node_modules = ["libsql", "sharp"]
+    included_files = [
+      "node_modules/sharp/**/*",
+    ]
 
 [dev]
   command = "npm run dev:preview"
